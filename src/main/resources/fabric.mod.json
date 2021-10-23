@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "my_mod",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Practice Mod",
+  "description": "Welcome to my practice mod!",
   "authors": [
-    "Me!"
+    "Kyle Werntz"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/KyleWerntz/Minecraft-Fabric-Practice"
   },
 
   "license": "CC0-1.0",
@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.fabricmc.example.ExampleMod"
+    ],
+    "client": [
+    	"net.fabricmc.example.ExampleClientMod"
     ]
   },
   "mixins": [
