@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "color=0": { "model": "minecraft:block/red_concrete"  },
+	    "color=1": { "model": "minecraft:block/green_concrete"},
+	    "color=2": { "model": "minecraft:block/blue_concrete" }
+    }
+}

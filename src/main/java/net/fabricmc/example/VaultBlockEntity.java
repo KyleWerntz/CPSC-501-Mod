@@ -18,7 +18,7 @@ public class VaultBlockEntity extends BlockEntity implements NamedScreenHandlerF
     private DefaultedList<ItemStack> inventory = DefaultedList.ofSize(Constants.VAULT_SIZE + (2 * Constants.KEY_SIZE), ItemStack.EMPTY);
     
     public VaultBlockEntity(BlockPos pos, BlockState state) {
-        super(ExampleMod.VAULT_BLOCK_ENTITY, pos, state);
+        super(MainInitializer.VAULT_BLOCK_ENTITY, pos, state);
     }
  
     @Override

@@ -2,7 +2,7 @@
 	"type": "minecraft:block",
 	"pools": [
 		{
-			"name": "tutorial:vault_block",
+			"name": "mod_501:vault_block",
 			"rolls": 1,
 			"entries": [
 				{
@@ -13,7 +13,7 @@
 							"source": "block_entity"
 						}
 					],
-					"name": "tutorial:vault_block"
+					"name": "mod_501:vault_block"
 				}
 			],
 			"conditions": [

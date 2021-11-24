@@ -1,7 +1,0 @@
-{
-    "parent": "tutorial:block/chest_template",
-    "textures": {
-        "0": "tutorial:entity/chest/vault_block",
-        "particle": "minecraft:block/obsidian"
-    }
-}

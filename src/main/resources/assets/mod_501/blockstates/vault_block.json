@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "mod_501:block/vault_block" },
+	    "facing=east":  { "model": "mod_501:block/vault_block", "y":  90 },
+	    "facing=south": { "model": "mod_501:block/vault_block", "y": 180 },
+	    "facing=west":  { "model": "mod_501:block/vault_block", "y": 270 }
+    }
+}

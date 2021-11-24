@@ -27,7 +27,7 @@ public class VaultScreenHandler extends ScreenHandler {
     }
 
     public VaultScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
-        super(ExampleMod.VAULT_SCREEN_HANDLER, syncId);
+        super(MainInitializer.VAULT_SCREEN_HANDLER, syncId);
         checkSize(inventory, Constants.VAULT_SIZE + (2 * Constants.KEY_SIZE));
         this.inventory = inventory;
         int rows = (int)Math.sqrt(Constants.VAULT_SIZE);

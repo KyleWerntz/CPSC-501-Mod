@@ -1,0 +1,7 @@
+{
+    "parent": "mod_501:block/chest_template",
+    "textures": {
+        "0": "mod_501:entity/chest/vault_block",
+        "particle": "minecraft:block/obsidian"
+    }
+}

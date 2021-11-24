@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "my_mod",
+  "id": "mod_501",
   "version": "${version}",
 
-  "name": "Practice Mod",
-  "description": "Welcome to my practice mod!",
+  "name": "CPSC 501 mod",
+  "description": "Enjoy my practice mod!",
   "authors": [
     "Kyle Werntz"
   ],
@@ -19,15 +19,12 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.fabricmc.example.MainInitializer"
     ],
     "client": [
-    	"net.fabricmc.example.ExampleClientMod"
+    	"net.fabricmc.example.MainClientMod"
     ]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
 
   "depends": {
     "fabricloader": ">=0.11.3",
