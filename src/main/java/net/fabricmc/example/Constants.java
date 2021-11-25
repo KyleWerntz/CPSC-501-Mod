@@ -4,6 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Constants {
+	private Constants() { }
+	
 	public static final int VAULT_SIZE = 25;
 	public static final int KEY_SIZE = 5;
 	public static final int GUI_ITEM_SIZE = 18;

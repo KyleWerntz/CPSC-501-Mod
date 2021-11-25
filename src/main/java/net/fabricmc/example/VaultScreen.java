@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class VaultScreen extends HandledScreen<ScreenHandler> {
     //A path to the gui texture. In this example we use the texture from the dispenser
-    private static final Identifier TEXTURE = new Identifier("tutorial", "textures/gui/container/container_unlocked.png");
+    private static final Identifier TEXTURE = new Identifier(Constants.NAMESPACE, "textures/gui/container/container_unlocked.png");
  
     public VaultScreen(ScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);

@@ -61,8 +61,8 @@ public class VaultBlock extends BlockWithEntity {
     @Override
     public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity player, ItemStack item) {
     	BlockEntity be = world.getBlockEntity(pos);
-    	if (items != null && be instanceof VaultBlockEntity) {
-    		((VaultBlockEntity)be).setItems(this.items);
+    	if (items != null && be instanceof VaultBlockEntity vbe) {
+    		vbe.setItems(this.items);
         	super.onPlaced(world, pos, state, player, item);
     	}
     }
@@ -83,8 +83,8 @@ public class VaultBlock extends BlockWithEntity {
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
     	BlockEntity be = world.getBlockEntity(pos);
-    	if (be instanceof VaultBlockEntity) {
-    		this.items = ((VaultBlockEntity)be).getItems();
+    	if (be instanceof VaultBlockEntity vbe) {
+    		this.items = vbe.getItems();
         	super.onBreak(world, pos, state, player);
     	}
     }

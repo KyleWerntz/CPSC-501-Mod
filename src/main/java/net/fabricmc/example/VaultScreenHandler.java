@@ -37,15 +37,14 @@ public class VaultScreenHandler extends ScreenHandler {
         int xOffset = 12;
         boolean codeEqualsKey = true;
         
-        if (inventory instanceof ImplementedInventory) {
-            DefaultedList<ItemStack> codeChecker = ((ImplementedInventory)inventory).getItems();
-	    	codeEqualsKey = ((ImplementedInventory) inventory).isUnlocked(codeChecker);
+        if (inventory instanceof ImplementedInventory ii) {
+            DefaultedList<ItemStack> codeChecker = ii.getItems();
+	    	codeEqualsKey = ii.isUnlocked(codeChecker);
 	    	previouslyUnlocked = codeEqualsKey;
         } else {
         	codeEqualsKey = false;
         }
         inventory.onOpen(playerInventory.player);
-        System.out.println("open screen");
         
         for (int i = 0; i < Constants.KEY_SIZE; i++) {
         	this.addSlot(new Slot(inventory, i, xOffset, yOffset + i * Constants.GUI_ITEM_SIZE));
@@ -99,9 +98,8 @@ public class VaultScreenHandler extends ScreenHandler {
     
     @Override
     public void close(PlayerEntity player) {
-    	if (!previouslyUnlocked && inventory instanceof ImplementedInventory) {
-    		ImplementedInventory castedInventory = (ImplementedInventory) inventory;
-            castedInventory.emptyIllegalContents(player, getStacks(), Constants.KEY_SIZE, (2 * Constants.KEY_SIZE) + Constants.VAULT_SIZE);
+    	if (!previouslyUnlocked && inventory instanceof ImplementedInventory ii) {
+            ii.emptyIllegalContents(player, getStacks(), Constants.KEY_SIZE, (2 * Constants.KEY_SIZE) + Constants.VAULT_SIZE);
         } 
     	super.close(player);
     }
@@ -116,7 +114,7 @@ public class VaultScreenHandler extends ScreenHandler {
     public ItemStack transferSlot(PlayerEntity player, int invSlot) {
         ItemStack newStack = ItemStack.EMPTY;
         Slot slot = this.slots.get(invSlot);
-        if (slot != null && slot.hasStack()) {
+        if (slot.hasStack()) {
             ItemStack originalStack = slot.getStack();
             newStack = originalStack.copy();
             if (invSlot < this.inventory.size()) {

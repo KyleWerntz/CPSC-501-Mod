@@ -32,7 +32,6 @@ public class VaultBlockEntity extends BlockEntity implements NamedScreenHandlerF
     
     @Override
     public boolean isValid(int slot, ItemStack item) {
-    	System.out.println("checking if slot " + slot + " is valid");
     	return slot >= 0 && isUnlocked(inventory) ? slot < inventory.size() : slot < Constants.KEY_SIZE;
     }
  
