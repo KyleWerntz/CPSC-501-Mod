@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "power=0": { "model": "minecraft:block/black_concrete"  },
+	    "power=1": { "model": "minecraft:block/gray_concrete"},
+	    "power=2": { "model": "minecraft:block/brown_concrete" },
+	    "power=3": { "model": "minecraft:block/purple_concrete"  },
+	    "power=4": { "model": "minecraft:block/blue_concrete"},
+	    "power=5": { "model": "minecraft:block/magenta_concrete" },
+	    "power=6": { "model": "minecraft:block/red_concrete"  },
+	    "power=7": { "model": "minecraft:block/pink_concrete"},
+	    "power=8": { "model": "minecraft:block/orange_concrete" },
+	    "power=9": { "model": "minecraft:block/cyan_concrete"  },
+	    "power=10": { "model": "minecraft:block/light_blue_concrete"},
+	    "power=11": { "model": "minecraft:block/green_concrete" },
+	    "power=12": { "model": "minecraft:block/lime_concrete"  },
+	    "power=13": { "model": "minecraft:block/yellow_concrete"},
+	    "power=14": { "model": "minecraft:block/light_gray_concrete" },
+	    "power=15": { "model": "minecraft:block/white_concrete" }
+    }
+}

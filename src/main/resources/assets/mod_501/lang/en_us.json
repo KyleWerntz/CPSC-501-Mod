@@ -1,4 +1,5 @@
 {
 	"block.mod_501.vault_block": "Vault",
-	"block.mod_501.rgb_block": "RGB Block"
+	"block.mod_501.rgb_block": "RGB Block",
+	"block.mod_501.power_display_block": "Power Display Block"
 }

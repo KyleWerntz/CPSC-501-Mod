@@ -20,15 +20,18 @@ import net.minecraft.util.registry.Registry;
 public class MainInitializer implements ModInitializer {
 	public static Block RGB_BLOCK;
 	public static Block VAULT_BLOCK;
+	public static Block POWER_DISPLAY_BLOCK;
 	
 	public static Item RGB_BLOCK_ITEM;
     public static Item VAULT_BLOCK_ITEM;
+	public static Item POWER_DISPLAY_ITEM;
     
     public static BlockEntityType<RGBBlockEntity> RGB_BLOCK_ENTITY;
 	public static BlockEntityType<VaultBlockEntity> VAULT_BLOCK_ENTITY;
 	
 	public static Identifier RGB_BLOCK_ID;
     public static Identifier VAULT_ID;
+    public static Identifier POWER_DISPLAY_ID;
     
     public static ScreenHandlerType<VaultScreenHandler> VAULT_SCREEN_HANDLER;
 	
@@ -42,8 +45,9 @@ public class MainInitializer implements ModInitializer {
 	}
 	
 	private static void registerIDs() {
-		VAULT_ID        = new Identifier(Constants.NAMESPACE, "vault_block");
-		RGB_BLOCK_ID = new Identifier(Constants.NAMESPACE, "rgb_block");
+		VAULT_ID          = new Identifier(Constants.NAMESPACE, "vault_block");
+		RGB_BLOCK_ID      = new Identifier(Constants.NAMESPACE, "rgb_block");
+		POWER_DISPLAY_ID  = new Identifier(Constants.NAMESPACE, "power_display_block");
 	}
 	
 	private static void registerBlocks() {
@@ -53,11 +57,15 @@ public class MainInitializer implements ModInitializer {
 		RGB_BLOCK = Registry.register(Registry.BLOCK, RGB_BLOCK_ID, 
 				new RGBBlock(FabricBlockSettings.of(Material.METAL).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1)
 												.strength(2.0f, 100.0f).sounds(BlockSoundGroup.STONE)));
+		POWER_DISPLAY_BLOCK = Registry.register(Registry.BLOCK, POWER_DISPLAY_ID, 
+				new PowerDisplayBlock(FabricBlockSettings.of(Material.METAL).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1)
+												.strength(2.0f, 100.0f).sounds(BlockSoundGroup.STONE)));
 	}
 	
 	private static void registerItems() {
-		VAULT_BLOCK_ITEM = Registry.register(Registry.ITEM, VAULT_ID, new BlockItem(VAULT_BLOCK, new FabricItemSettings().group(ItemGroup.DECORATIONS).maxCount(1)));
-		RGB_BLOCK_ITEM   = Registry.register(Registry.ITEM, RGB_BLOCK_ID, new BlockItem(RGB_BLOCK, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
+		VAULT_BLOCK_ITEM   = Registry.register(Registry.ITEM, VAULT_ID, new BlockItem(VAULT_BLOCK, new FabricItemSettings().group(ItemGroup.DECORATIONS).maxCount(1)));
+		RGB_BLOCK_ITEM     = Registry.register(Registry.ITEM, RGB_BLOCK_ID, new BlockItem(RGB_BLOCK, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
+		POWER_DISPLAY_ITEM = Registry.register(Registry.ITEM, POWER_DISPLAY_ID, new BlockItem(POWER_DISPLAY_BLOCK, new FabricItemSettings().group(ItemGroup.REDSTONE)));
 	}
 	
 	private static void registerEntities() {
